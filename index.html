@@ -6,8 +6,8 @@
         <title>DOM Manipulation and Events</title>
         <meta charset="UTF-9">
 
-        <! add the 'defer' to get it to work.
-        this loads the file after the HTML is parsed>
+        <!-- add the 'defer' to get it to work.
+        this loads the file after the HTML is parsed-->
         <script src = "myscripts.js" defer></script>
 
     </head>
@@ -18,7 +18,16 @@
         <p id="container"></p>
         <h3 id="container2"></h3>
         <div id="container3"></div>
-    
+        
+        <!-- Method 1: js in html file -->
+        <!-- <button onclick="alert('Hello World')">Click Me</button>-->
+        <button onclick = 'alertFunction()'>Click Me Baby</button>
+
+        <!-- Method 2: JS outside of HTML file-->
+        <button id='btn'>Click Me</button>
+
+        <!-- Method 3: allows for multiple "onclick" properties-->
+        <button id="btn2">Click Me Too</button>
     </body>
 
 </html>
