@@ -1,59 +1,11 @@
-const pcontainer = document.querySelector('#container');
+//buttons is a node list. It looks and acts much like an array
+const buttons = document.querySelectorAll('button');
 
-const content = document.createElement('div');
-content.classList.add('content');
-content.textContent = "Hey I'm red";
-content.style.color = 'red'
-
-container.appendChild(content);
-
-//step 1: reference the 'container' tag that already exists in HTML
-const h3container = document.querySelector('#container2');
-
-//step 2: create new tag and store in a new variable 
-const h3content = document.createElement ('h3');
-
-//step 3: add class, text, or style 
-h3content.classList.add('h3content');
-h3content.textContent = "I'm a blue h3!";
-h3content.style.color = 'blue';
-
-//step 4: finally append to 'container'
-container2.appendChild(h3content);
-
-//
-
-const divcontainer = document.querySelector('#container3');
-divcontainer.setAttribute('style', 'border: 5px solid black; background-color: pink;');
-
-const divcontent = document.createElement('div');
-divcontent.classList.add('divcontent');
-divcontent.textContent = "I'm in a div";
-
-container3.appendChild(divcontent);
-
-const pcontent =document.createElement('p');
-pcontent.textContent = 'ME TOO!';
-container3.appendChild(pcontent);
-
-//Events
-//Method 2
-const btn = document.querySelector('#btn');
-//btn.onclick = () => alert('Hello World');
-
-//Method 3
-const btn2 = document.querySelector('#btn2');
-//btn2.addEventListener('click',() => {
-//    alert("Hello World");
-//});
-
-//Event with function
-function alertFunction() {
-    alert('Yay! You did it!');
-}
-
-//Method 2
-btn.onclick = alertFunction;
-
-//Method 3
-btn2.addEventListener('click',alertFunction);
+//we use the .forEach method to iterate through each button
+buttons.forEach((button) => {
+   
+    //and for each one we add 'click' listener
+    button.addEventListener('click', () => {
+        alert(button.id);
+    })
+})
